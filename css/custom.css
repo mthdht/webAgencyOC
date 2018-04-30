@@ -253,9 +253,10 @@ h2 {
     margin:  20px auto;
 }
 
-.separation .cercle, .service-logo .cercle {
+.separation .cercle, .service-logo-border .cercle {
     position: absolute;
     width: 19px;
+    height: 19px;
     text-align: center;
     background-color: white;
     top: -9px;
