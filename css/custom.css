@@ -1,0 +1,347 @@
+/* CSS pour le style de la page du projet WebAgency
+ *
+ * Auteur: mthdht
+ *
+ */
+
+/* import the roboto fonts */
+@font-face {
+    font-family: Roboto-Medium;
+    src: url("../fonts/Roboto-Medium.ttf");
+}
+
+@font-face {
+    font-family: Roboto-Black;
+    src: url("../fonts/Roboto-Black.ttf");
+}
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url("../fonts/Roboto-Light.ttf");
+}
+
+@font-face {
+    font-family: Roboto-thin;
+    src: url("../fonts/Roboto-Thin.ttf");
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url("../fonts/Roboto-Regular.ttf");
+}
+
+/* ----------------- QUELQUES CLASSE UTILITAIRE ----------------- */
+
+/* met les element en ligne */
+.ligne {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+/* creer un conteneur qui aura une taille max differente selon les support */
+.container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* ----------------- FIN QUELQUES CLASSE UTILITAIRE ----------------- */
+
+
+
+
+
+/* ---------- STYLE MOBILE et superieur ---------- */
+
+/* fait en sorte que les taille des boites contienent les margin, padding et border */
+body * {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    font-family: Roboto-Medium;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    max-height: 600px;
+}
+
+.brand {
+    margin: 15px 0;
+}
+/* style for navigation */
+.navigation-bar {
+    justify-content: space-between;
+}
+
+.navigation-bar ul {
+    list-style: none;
+    display: none;
+    margin: 0;
+}
+
+.navigation-bar a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, .6);
+    font-size: .8rem;
+    padding: 30px 20px;
+    display: block;
+
+    border-top: 3px solid white;
+}
+
+.navigation-bar a:hover {
+    border-color: #5daacf;
+}
+
+/* end style for navigation */
+
+/* style for caroussel */
+.carousel {
+    position: relative;
+}
+
+.carousel input {
+    display: none;
+}
+
+.carousel_img {
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#premiere {
+    display: none;
+    background: url("../images/slider/bg2.jpg") center no-repeat;
+    background-size: cover;
+    min-height: 300px;
+}
+
+#deuxieme {
+    background: url("../images/slider/bg1.jpg") center no-repeat;
+    background-size: cover;
+    min-height: 300px;
+    max-height: 600px;
+}
+
+.contenu {
+    color: #fff;
+    margin-top: 50px;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: medium;
+}
+
+.contenu p {
+    font-size: small;
+}
+
+.contenu span {
+    color: #5daacf;
+}
+
+.contenu button {
+    margin-top: 5px;
+    background-color: #5daacf;
+    border: 0;
+    border-bottom: 3px solid #4891b7;
+    color: #fff;
+    border-radius: 3px;
+    font-family: Roboto-Black;
+    cursor: pointer;
+    padding: 10cd px 15px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 70px;
+    width: 70px;
+    z-index: 11;
+    color: #fff;
+    background-color: rgba(0,0,0,.3);
+    border-radius: 50%;
+    text-align: center;
+    display: none;
+}
+
+.prev {
+    left: -35px;
+}
+
+.next {
+    right: -35px;
+}
+
+.prev span, .next span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.next span {
+    left: 25%;
+}
+
+.prev span {
+    right: 25%;
+}
+
+.border-right, .border-left {
+    position: absolute;
+    z-index: 100;
+    bottom: 0px;
+    height: 7px;
+    width: 50%;
+    background-color: #5DAACF;
+}
+
+.border-right {
+    left: 50%;
+}
+
+/* permet de changer l'image quand on clique sur une fleche */
+#image-1:checked ~ #premiere,
+#image-2:checked ~ #deuxieme {
+    z-index: 9;
+    animation: apparition 1s ease-out;
+}
+
+/* animation de changement d'image */
+@keyframes apparition {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+/* style for caroussel */
+
+
+/* ---------- FIN STYLE MOBILE et superieur ---------- */
+
+
+
+/* ---------- STYLE LARGE MOBILE et superieur ---------- */
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+
+    h1 {
+        font-size: large;
+    }
+}
+
+/* ---------- FIN STYLE LARGE MOBILE et superieur ---------- */
+
+
+/* ---------- STYLE TABLETTE et superieur ---------- */
+@media (min-width: 768px){
+    .container {
+        max-width: 720px;
+    }
+
+    /* fait apparaitre les liens */
+    .navigation-bar ul {
+        display: flex;
+    }
+
+    .carousel_img {
+
+        justify-content: center;
+    }
+
+    #premiere {
+        display: flex;
+        background-size: cover;
+        min-height: 350px;
+    }
+
+    #deuxieme {
+        background-size: cover;
+        min-height: 350px;
+    }
+
+    .contenu {
+        margin-top: 0;
+    }
+
+    h1 {
+        font-size: x-large;
+    }
+
+    .contenu p {
+        font-size: .85rem;
+    }
+
+    .prev, .next {
+        display: block;
+    }
+}
+/* ---------- FIN STYLE TABLETTE et superieur ---------- */
+
+
+
+
+/* ---------- STYLE DESKTOP et superieur ---------- */
+@media (min-width: 992px){
+    .container {
+        max-width: 992px;
+    }
+
+    #premiere {
+        min-height: 400px;
+    }
+
+    #deuxieme {
+        min-height: 400px;
+    }
+
+    .contenu br.break {
+        display: none;
+    }
+
+    h1 {
+        font-size: xx-large;
+    }
+
+
+}
+/* ---------- FIN STYLE DESKTOP et superieur ---------- */
+
+
+
+
+/* ---------- STYLE DESKTOP et superieur ---------- */
+@media (min-width: 1200px){
+    .container {
+        max-width: 1140px;
+    }
+
+    #premiere {
+        min-height: 450px;
+    }
+
+    #deuxieme {
+        min-height: 450px;
+    }
+}
+/* ---------- FIN STYLE DESKTOP et superieur ---------- */
