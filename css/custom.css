@@ -70,21 +70,24 @@ body, html {
 
 header {
     min-height: 380px;
-    margin-bottom: 30px;
 }
 
 .brand {
     margin: 15px 0;
 }
-/* style for navigation */
+
+/* STYLE FOR NAVIGATION */
 .navigation-bar {
     justify-content: space-between;
 }
 
-.navigation-bar ul {
+.navigation-bar ul, .portfolio-navigation ul{
     list-style: none;
-    display: none;
     margin: 0;
+}
+
+.navigation-bar ul {
+    display: none;
 }
 
 .navigation-bar a {
@@ -93,17 +96,16 @@ header {
     font-size: .8rem;
     padding: 30px 20px;
     display: block;
-
     border-top: 3px solid white;
 }
 
 .navigation-bar a:hover {
     border-color: #5daacf;
 }
+/* END STYLE FOR NAVIGATION */
 
-/* end style for navigation */
 
-/* style for caroussel */
+/* STYLE POUR CAROUSEL */
 .carousel {
     position: relative;
 }
@@ -231,20 +233,30 @@ h1 {
     }
 }
 
+/* FIN STYLE POUR CAROUSEL */
 
 
-/* style for caroussel */
+/* STYLE DES SECTIONS */
+.nos-services, .portfolio {
+    padding-top: 30px;
+}
 
-/* style des sections */
 h2 {
     color: rgba(0,0,0,.8);
     text-align: center;
     text-transform: uppercase;
 }
 
+.titre p {
+    text-align: center;
+    color: rgba(0,0,0,.6);
+    font-size: small;
+}
+
 .separation {
     position: relative;
 }
+
 .separation .trait {
     width: 90px;
     height: 1px;
@@ -255,27 +267,20 @@ h2 {
 
 .separation .cercle, .service-logo-border .cercle {
     position: absolute;
-    width: 19px;
-    height: 19px;
+    width: 20px;
+    height: 20px;
     text-align: center;
     background-color: white;
+    border-radius: 50%;
     top: -9px;
     right: 50%;
     transform: translateX(50%);
     color: #5daacf;
 }
 
-.nos-services .titre p {
-    text-align: center;
-    color: rgba(0,0,0,.6);
-    font-size: small;
-}
 
-pc-image {
-    width: 100%;
-}
-
-.nos-services img {
+/* section services */
+pc-image, .nos-services img {
     width: 100%;
 }
 
@@ -297,11 +302,6 @@ pc-image {
 .service-logo {
     width: 60px;
     height: 50px;
-    /*display: flex;*/
-    /*align-self: center;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
-
     position: relative;
     color: #5daacf;
 }
@@ -345,10 +345,7 @@ pc-image {
     transform: translateY(-50%);
 }
 
-.service-contenu {
-}
-
-.service-contenu h3 {
+h3 {
     font-size: medium;
     margin: 0 0 10px;
     color: rgba(0,0,0,.8);
@@ -359,8 +356,105 @@ pc-image {
     font-size: .85rem;
     color: rgba(0,0,0,.6);
 }
+/* fin style section services */
 
-/* fin style des sections
+/* style section portfolio */
+.portfolio {
+    background-color: #f5f5f5;
+}
+
+.portfolio-navigation {
+    background-color: #e4e4e4;
+    margin: 40px auto;
+    border-radius: 3px;
+    color: rgba(0,0,0,.6);
+}
+
+.portfolio-navigation ul {
+    padding: 0;
+    text-align: center;
+}
+
+.portfolio-navigation li {
+    display: flex;
+    width: 25%;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.portfolio-navigation li:first-child.active {
+    border-radius: 3px 0 0 3px;
+}
+
+.portfolio-navigation li i {
+    display: none;
+}
+
+.portfolio-navigation li.active i {
+    display: block;
+    position: absolute;
+    bottom: -20px;
+    color: #4891b7;
+}
+
+.active {
+    background-color: #5daacf;
+    color: white;
+    border-bottom: 3px solid #4891b7;
+}
+
+.portfolio-item {
+    padding: 0 5px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.portfolio-item img {
+    width: 100%;
+}
+
+.portfolio-item .info-portfolio {
+    display: none;
+    position: absolute;
+    bottom: 4px;
+    height: 40%;
+    width: calc(100% - 10px);
+    color: #fff;
+    padding: 5px 10px;
+    background-color: rgba(97, 78, 26, .65);
+}
+
+.info-portfolio .see-more {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: #5daacf;
+}
+
+.portfolio-item:hover .info-portfolio {
+    display: block;
+    cursor: pointer;
+}
+
+.info-portfolio h3 {
+    color: white;
+}
+
+/* fin style section portfolio */
+/* FIN STYLE DES SECTIONS */
+
+
 
 
 /* ---------- FIN STYLE MOBILE et superieur ---------- */
@@ -379,6 +473,20 @@ pc-image {
 
     .service-logo {
         width: 55px;
+    }
+
+    .portfolio-navigation {
+        width: 70%;
+    }
+
+    .portfolio-item {
+        width: 50%;
+        padding: 0 10px;
+        margin-bottom: 20px;
+    }
+
+    .portfolio-item .info-portfolio {
+        width: calc(100% - 20px);
     }
 }
 
@@ -432,7 +540,7 @@ pc-image {
         display: block;
     }
 
-    .nos-services .titre p {
+    .titre p {
         width: 70%;
         margin: auto;
         line-height: 1.4;
@@ -450,6 +558,23 @@ pc-image {
         width: 60px;
     }
 
+    .portfolio-navigation {
+        width: 60%;
+    }
+
+    .portfolio-item {
+        width: 33.33%;
+        padding: 0 15px;
+        margin-bottom: 30px;
+    }
+
+    .portfolio-item .info-portfolio {
+        width: calc(100% - 30px);
+    }
+
+    .portfolio-item:nth-child(7), .portfolio-item:nth-child(8) {
+        width: 50%;
+    }
 
 }
 /* ---------- FIN STYLE TABLETTE et superieur ---------- */
@@ -479,7 +604,7 @@ pc-image {
         font-size: xx-large;
     }
 
-    .nos-services .titre p {
+    .titre p {
         font-size: .9rem;
         width: 50%;
     }
@@ -487,6 +612,20 @@ pc-image {
     .service-logo {
         width: 55px;
     }
+
+    .portfolio-navigation {
+        width: 50%;
+    }
+
+    .portfolio-item {
+        width: 25%;
+        padding: 0 15px;
+    }
+
+    .portfolio-item:nth-child(7), .portfolio-item:nth-child(8) {
+        width: 25%;
+    }
+
 }
 /* ---------- FIN STYLE DESKTOP et superieur ---------- */
 
@@ -505,6 +644,10 @@ pc-image {
 
     #premiere, #deuxieme {
         min-height: 450px;
+    }
+
+    .portfolio-navigation {
+        width: 40%;
     }
 }
 /* ---------- FIN STYLE DESKTOP et superieur ---------- */
