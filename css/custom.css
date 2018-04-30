@@ -296,14 +296,46 @@ pc-image {
 .service-logo {
     width: 60px;
     height: 50px;
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    border: 1px solid #ccc;
+    /*display: flex;*/
+    /*align-self: center;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+
     position: relative;
     color: #5daacf;
+}
+
+.service-logo-border {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    } }
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+
+.service-logo i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .service-logo .cercle {
@@ -342,6 +374,10 @@ pc-image {
 
     h1 {
         font-size: large;
+    }
+
+    .service-logo {
+        width: 55px;
     }
 }
 
@@ -408,6 +444,12 @@ pc-image {
     .services {
         width: 50%;
     }
+
+    .service-logo {
+        width: 60px;
+    }
+
+
 }
 /* ---------- FIN STYLE TABLETTE et superieur ---------- */
 
@@ -441,6 +483,9 @@ pc-image {
         width: 50%;
     }
 
+    .service-logo {
+        width: 55px;
+    }
 }
 /* ---------- FIN STYLE DESKTOP et superieur ---------- */
 
