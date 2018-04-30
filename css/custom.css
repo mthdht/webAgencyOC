@@ -69,7 +69,8 @@ body, html {
 }
 
 header {
-    max-height: 600px;
+    min-height: 380px;
+    margin-bottom: 30px;
 }
 
 .brand {
@@ -234,6 +235,100 @@ h1 {
 
 /* style for caroussel */
 
+/* style des sections */
+h2 {
+    color: rgba(0,0,0,.8);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.separation {
+    position: relative;
+}
+.separation .trait {
+    width: 90px;
+    height: 1px;
+    background-color: #ccc;
+    opacity: .6;
+    margin:  20px auto;
+}
+
+.separation .cercle, .service-logo .cercle {
+    position: absolute;
+    width: 19px;
+    text-align: center;
+    background-color: white;
+    top: -9px;
+    right: 50%;
+    transform: translateX(50%);
+    color: #5daacf;
+}
+
+.nos-services .titre p {
+    text-align: center;
+    color: rgba(0,0,0,.6);
+    font-size: small;
+}
+
+pc-image {
+    width: 100%;
+}
+
+.nos-services img {
+    width: 100%;
+}
+
+.services {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+}
+
+.services-contenu {
+    margin-top: 10px;
+}
+
+.service {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.service-logo {
+    width: 60px;
+    height: 50px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    position: relative;
+    color: #5daacf;
+}
+
+.service-logo .cercle {
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+}
+
+.service-contenu {
+}
+
+.service-contenu h3 {
+    font-size: medium;
+    margin: 0 0 10px;
+    color: rgba(0,0,0,.8);
+}
+
+.services-contenu p {
+    margin: 0;
+    font-size: .85rem;
+    color: rgba(0,0,0,.6);
+}
+
+/* fin style des sections
+
 
 /* ---------- FIN STYLE MOBILE et superieur ---------- */
 
@@ -275,6 +370,10 @@ h1 {
         min-height: 350px;
     }
 
+    header {
+        min-height: 430px;
+    }
+
     #deuxieme {
         background-size: cover;
         min-height: 350px;
@@ -295,6 +394,20 @@ h1 {
     .prev, .next {
         display: block;
     }
+
+    .nos-services .titre p {
+        width: 70%;
+        margin: auto;
+        line-height: 1.4;
+    }
+
+    .pc-image {
+        width: 50%;
+    }
+
+    .services {
+        width: 50%;
+    }
 }
 /* ---------- FIN STYLE TABLETTE et superieur ---------- */
 
@@ -307,11 +420,11 @@ h1 {
         max-width: 992px;
     }
 
-    #premiere {
-        min-height: 400px;
+    header {
+        min-height: 480px;
     }
 
-    #deuxieme {
+    #premiere, #deuxieme {
         min-height: 400px;
     }
 
@@ -323,6 +436,10 @@ h1 {
         font-size: xx-large;
     }
 
+    .nos-services .titre p {
+        font-size: .9rem;
+        width: 50%;
+    }
 
 }
 /* ---------- FIN STYLE DESKTOP et superieur ---------- */
@@ -336,11 +453,11 @@ h1 {
         max-width: 1140px;
     }
 
-    #premiere {
-        min-height: 450px;
+    header {
+        min-height: 530px;
     }
 
-    #deuxieme {
+    #premiere, #deuxieme {
         min-height: 450px;
     }
 }
