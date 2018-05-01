@@ -15,19 +15,32 @@
 <body>
     <!-- HEADER DE LA PAGE -->
     <header>
-        <div class="navigation-bar container ligne">
-            <div class="brand">
-                <img src="images/logo.png" alt="logo du site" width="200px">
-            </div>
-            <nav>
-                <ul class="ligne">
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
+        <div class="fixed">
+            <div class="navigation-bar container ligne">
+                <div class="brand">
+                    <img src="images/logo.png" alt="logo du site" width="200px">
+                </div>
+
+                <nav>
+                    <ul class="ligne">
+                        <li><a href="#accueil" class="link">Accueil</a></li>
+                        <li><a href="#services" class="link">Services</a></li>
+                        <li><a href="#portfolio" class="link">Portfolio</a></li>
+                        <li><a href="#contact" class="link">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <a href="#small-links" class="menu"><i class="fas fa-bars"></i></a>
+
+                <ul id="small-links">
+                    <a href="#accueil">Accueil</a>
+                    <a href="#services">Services</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#contact">Contact</a>
                 </ul>
-            </nav>
+            </div>
         </div>
+
 
         <div class="carousel">
             <input type="radio" id="image-1" name="images" checked/>
@@ -69,7 +82,7 @@
 
 
     <!-- SECTION 'NOS SERVICES' -->
-    <section class="nos-services container">
+    <section class="nos-services container" id="services">
         <div class="titre">
             <h2>nos services</h2>
             <div class="separation">
@@ -151,7 +164,7 @@
 
 
     <!-- SECTION 'NOS PROJETS' -->
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="container">
             <div class="titre">
                 <h2>nos projets</h2>
