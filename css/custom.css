@@ -48,6 +48,10 @@
     margin: 0 auto;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* ----------------- FIN QUELQUES CLASSE UTILITAIRE ----------------- */
 
 
@@ -70,6 +74,8 @@ body, html {
 
 header {
     min-height: 380px;
+    border-top: 1px solid white;
+    padding: 0;
 }
 
 .brand {
@@ -77,6 +83,16 @@ header {
 }
 
 /* STYLE FOR NAVIGATION */
+
+.fixed {
+    position: fixed;
+    top: 0px;
+    z-index: 99;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+
 .navigation-bar {
     justify-content: space-between;
 }
@@ -90,8 +106,7 @@ header {
     display: none;
 }
 
-.navigation-bar a {
-    text-decoration: none;
+.navigation-bar a.link {
     color: rgba(0, 0, 0, .6);
     font-size: .8rem;
     padding: 30px 20px;
@@ -102,12 +117,58 @@ header {
 .navigation-bar a:hover {
     border-color: #5daacf;
 }
+
+.menu {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: #5daacf;
+    border-radius: 3px;
+    border: 2px solid #5daacf;
+}
+
+.menu:hover {
+    background-color: #5daacf;
+    color: white;
+}
+
+#small-links {
+    display: none;
+    list-style: none;
+    background-color: #5daacf;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#small-links a {
+    padding: 10px;
+    border-bottom: 2px solid #4891b7;
+    color: white;
+}
+
+#small-links a:hover {
+    color: white;
+    background-color: #4891b7;
+}
+
+#small-links:target {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
 /* END STYLE FOR NAVIGATION */
 
 
 /* STYLE POUR CAROUSEL */
 .carousel {
     position: relative;
+    margin-top: 78px;
 }
 
 .carousel input {
@@ -396,6 +457,8 @@ h3 {
 .portfolio-navigation li.active i {
     display: block;
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: -20px;
     color: #4891b7;
 }
@@ -502,6 +565,10 @@ h3 {
     /* fait apparaitre les liens */
     .navigation-bar ul {
         display: flex;
+    }
+
+    .menu {
+        display: none;
     }
 
     .carousel_img {
