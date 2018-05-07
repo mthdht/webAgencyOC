@@ -181,6 +181,7 @@ ul {
 
 #small-links a {
     padding: 10px;
+    font-size: x-large;
     border-bottom: 2px solid #4891b7;
 }
 
@@ -219,7 +220,7 @@ ul {
 
 h1 {
     text-transform: uppercase;
-    font-size: medium;
+    font-size: large;
 }
 
 .contenu p {
@@ -465,6 +466,7 @@ h3 {
     text-align: left;
     margin: 0px 0px 10px;
     text-transform: none;
+    font-size: x-large;
 }
 
 .contact-form p {
