@@ -52,11 +52,6 @@
     padding: 0 15px;
     margin: 0 auto;
 }
-
-a {
-    text-decoration: none;
-}
-
 /* ----------------- FIN QUELQUES CLASSE UTILITAIRE ----------------- */
 
 
@@ -83,6 +78,65 @@ header {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#small-links:target, .carousel_img, .services, .border-right, .border-left, pc-image, .nos-services img, .service-logo-border, .portfolio-item img, .contact-form input:not(.submit), textarea, .carte iframe, .voile-bleu {
+    width: 100%;
+}
+
+.menu:hover, .contenu button, #small-links a, .active, .border-right, .border-left, .info-portfolio .see-more, .submit {
+    background-color: #5daacf;
+}
+
+.menu:hover, .contenu, .contenu button, #small-links a, .active, .prev, .next, .portfolio-item .info-portfolio, .info-portfolio h3 {
+    color: white;
+}
+
+.menu, .contenu span, .separation .cercle, .service-logo-border .cercle, .service-logo {
+    color: #5daacf;
+}
+
+.navigation-bar ul, .carousel input, .prev, .next, #premiere, #small-links, .portfolio-navigation li i, .portfolio-item .info-portfolio {
+    display: none;
+}
+
+.navigation-bar a.link, .portfolio-navigation li.active i, .portfolio-item:hover .info-portfolio, .contact-form input:not(.submit), textarea {
+    display: block;
+}
+
+.carousel_img, .border-left, .border-right, .separation .cercle, .service-logo-border .cercle, .service-logo i, .portfolio-navigation li.active i, .portfolio-item .info-portfolio, .info-portfolio .see-more, .voile-bleu {
+    position: absolute;
+}
+
+.carousel, .separation, .service-logo, .portfolio-navigation li, .portfolio-item, .contact, .carte {
+    position: relative;
+}
+
+#small-links:target, .carousel_img, .services {
+    display: flex;
+    flex-direction: column;
+}
+
+.prev span, .next span, .prev, .next, .service-logo .cercle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu, .portfolio-navigation li, .info-portfolio .see-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .brand {
     margin: 15px 0;
 }
@@ -102,20 +156,10 @@ header {
     justify-content: space-between;
 }
 
-.navigation-bar ul, .portfolio-navigation ul{
-    list-style: none;
-    margin: 0;
-}
-
-.navigation-bar ul {
-    display: none;
-}
-
 .navigation-bar a.link {
     color: rgba(0, 0, 0, .6);
     font-size: .8rem;
     padding: 30px 20px;
-    display: block;
     border-top: 3px solid white;
 }
 
@@ -124,72 +168,39 @@ header {
 }
 
 .menu {
-    display: flex;
     align-self: center;
-    justify-content: center;
-    align-items: center;
     width: 40px;
     height: 40px;
-    color: #5daacf;
     border-radius: 3px;
     border: 2px solid #5daacf;
 }
 
-.menu:hover {
-    background-color: #5daacf;
-    color: white;
-}
-
-#small-links {
-    display: none;
-    list-style: none;
-    background-color: #5daacf;
-    margin: 0;
-    padding: 0;
+#small-links, .prev, .next, h2, .titre p, .separation .cercle, .service-logo-border .cercle, .portfolio-navigation ul {
     text-align: center;
 }
 
 #small-links a {
     padding: 10px;
     border-bottom: 2px solid #4891b7;
-    color: white;
 }
 
 #small-links a:hover {
-    color: white;
     background-color: #4891b7;
 }
-
-#small-links:target {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
 /* END STYLE FOR NAVIGATION */
 
 
 /* STYLE POUR CAROUSEL */
 .carousel {
-    position: relative;
     margin-top: 78px;
 }
 
-.carousel input {
-    display: none;
-}
-
 .carousel_img {
-    position: absolute;
-    width: 100%;
     z-index: 0;
     overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
 }
 
 #premiere {
-    display: none;
     background: url("../images/slider/bg2.jpg") center no-repeat;
     background-size: cover;
     min-height: 300px;
@@ -203,7 +214,6 @@ header {
 }
 
 .contenu {
-    color: #fff;
     margin-top: 50px;
 }
 
@@ -216,16 +226,10 @@ h1 {
     font-size: small;
 }
 
-.contenu span {
-    color: #5daacf;
-}
-
 .contenu button {
     margin-top: 5px;
-    background-color: #5daacf;
     border: 0;
     border-bottom: 3px solid #4891b7;
-    color: #fff;
     border-radius: 3px;
     font-family: Roboto-Black;
     cursor: pointer;
@@ -233,17 +237,11 @@ h1 {
 }
 
 .prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     height: 70px;
     width: 70px;
     z-index: 11;
-    color: #fff;
     background-color: rgba(0,0,0,.3);
     border-radius: 50%;
-    text-align: center;
-    display: none;
 }
 
 .prev {
@@ -252,12 +250,6 @@ h1 {
 
 .next {
     right: -35px;
-}
-
-.prev span, .next span {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
 }
 
 .next span {
@@ -269,12 +261,9 @@ h1 {
 }
 
 .border-right, .border-left {
-    position: absolute;
     z-index: 100;
     bottom: 0px;
     height: 7px;
-    width: 100%;
-    background-color: #5DAACF;
 }
 
 .border-right {
@@ -308,18 +297,13 @@ h1 {
 
 h2 {
     color: rgba(0,0,0,.8);
-    text-align: center;
     text-transform: uppercase;
+    font-size: xx-large;
 }
 
 .titre p {
-    text-align: center;
     color: rgba(0,0,0,.6);
     font-size: small;
-}
-
-.separation {
-    position: relative;
 }
 
 .separation .trait {
@@ -331,27 +315,19 @@ h2 {
 }
 
 .separation .cercle, .service-logo-border .cercle {
-    position: absolute;
     width: 20px;
     height: 20px;
-    text-align: center;
     background-color: white;
     border-radius: 50%;
     top: -9px;
     right: 50%;
     transform: translateX(50%);
-    color: #5daacf;
 }
 
 
 /* section services */
-pc-image, .nos-services img {
-    width: 100%;
-}
 
 .services {
-    display: flex;
-    flex-flow: column;
     justify-content: flex-end;
 }
 
@@ -367,13 +343,10 @@ pc-image, .nos-services img {
 .service-logo {
     width: 60px;
     height: 50px;
-    position: relative;
-    color: #5daacf;
 }
 
 .service-logo-border {
     height: 100%;
-    width: 100%;
     border-radius: 50%;
     border: 1px solid #ccc;
     -webkit-animation:spin 4s linear infinite;
@@ -398,16 +371,9 @@ pc-image, .nos-services img {
 }
 
 .service-logo i {
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-}
-
-.service-logo .cercle {
-    top: 50%;
-    right: -10px;
-    transform: translateY(-50%);
 }
 
 h3 {
@@ -437,30 +403,19 @@ h3 {
 
 .portfolio-navigation ul {
     padding: 0;
-    text-align: center;
 }
 
 .portfolio-navigation li {
-    display: flex;
     width: 25%;
     height: 40px;
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
-    position: relative;
 }
 
 .portfolio-navigation li:first-child.active {
     border-radius: 3px 0 0 3px;
 }
 
-.portfolio-navigation li i {
-    display: none;
-}
-
 .portfolio-navigation li.active i {
-    display: block;
-    position: absolute;
     left: 50%;
     transform: translateX(-50%);
     bottom: -20px;
@@ -468,62 +423,38 @@ h3 {
 }
 
 .active {
-    background-color: #5daacf;
-    color: white;
     border-bottom: 3px solid #4891b7;
 }
 
 .portfolio-item {
     padding: 0 5px;
-    position: relative;
     margin-bottom: 10px;
 }
 
-.portfolio-item img {
-    width: 100%;
-}
-
 .portfolio-item .info-portfolio {
-    display: none;
-    position: absolute;
     bottom: 4px;
     height: 40%;
     width: calc(100% - 10px);
-    color: #fff;
     padding: 5px 10px;
     background-color: rgba(97, 78, 26, .65);
 }
 
 .info-portfolio .see-more {
-    position: absolute;
     top: 0;
     right: 10px;
     width: 40px;
     height: 40px;
     transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border: 2px solid white;
     border-radius: 50%;
-    background-color: #5daacf;
 }
 
 .portfolio-item:hover .info-portfolio {
-    display: block;
     cursor: pointer;
-}
-
-.info-portfolio h3 {
-    color: white;
 }
 /* fin style section portfolio */
 
 /* style carte et contact */
-
-.contact {
-    position: relative;
-}
 
 .contact-form {
     background-color: rgba(255,255,255,.7);
@@ -542,7 +473,6 @@ h3 {
 
 .contact-form .name {
     font-family: Roboto-Black;
-
 }
 
 .contact-form p {
@@ -551,8 +481,6 @@ h3 {
 }
 
 .contact-form input:not(.submit), textarea {
-    display: block;
-    width: 100%;
     padding: 8px;
     margin-top: 15px;
     border-radius: 4px;
@@ -567,7 +495,6 @@ h3 {
 }
 
 .submit {
-    background-color: #5daacf;
     border: 0;
     border-bottom: 3px solid #4891b7;
     color: #fff;
@@ -578,19 +505,9 @@ h3 {
     margin-top: 15px;
 }
 
-.carte {
-    position: relative;
-}
-
-.carte iframe {
-    width: 100%;
-}
-
 .voile-bleu {
-    position: absolute;
     pointer-events: none;
     top:0;
-    width: 100%;
     height: 100%;
     background-color: rgba(0,120,200,.3);
 }
