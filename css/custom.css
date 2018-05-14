@@ -415,6 +415,12 @@ h3 {
     cursor: pointer;
 }
 
+.portfolio-navigation li:hover {
+    background-color: #5daacf;
+    border-bottom: 3px solid #4891b7;
+    color: white;
+}
+
 .portfolio-navigation li:first-child.active {
     border-radius: 3px 0 0 3px;
 }
