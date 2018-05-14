@@ -180,6 +180,8 @@ ul {
 }
 
 #small-links a {
+    display: block;
+    width: 100%;
     padding: 10px;
     font-size: x-large;
     border-bottom: 2px solid #4891b7;
@@ -300,6 +302,7 @@ h2 {
     color: rgba(0,0,0,.8);
     text-transform: uppercase;
     font-size: xx-large;
+    margin-top: 0;
 }
 
 .titre p {
