@@ -477,14 +477,20 @@ h3 {
         height: 40%;
     }
 }
-@-webkit-keyframes spin {
-    100% {
-        -webkit-transform: rotate(360deg);
-    } }
-@keyframes spin {
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform:rotate(360deg);
+@-webkit-keyframes open {
+    from {
+        height: 0;
+    }
+    to {
+        height: 40%;
+    }
+}
+@keyframes open {
+    from {
+        height: 0;
+    }
+    to {
+        height: 40%;
     }
 }
 /* fin style section portfolio */
